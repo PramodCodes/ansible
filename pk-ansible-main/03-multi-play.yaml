@@ -1,15 +1,15 @@
 # multi play
-- name: play-1
+- name: play 1
   hosts: localhost # you can also connect with local host along with outside servers
   tasks:
   - name: play 1 task 1
-  ansible.builtin.debug:
+    ansible.builtin.debug:
     msg: "Hello from play 1 task 1"
 
 - name: play-2
   hosts: localhost
   tasks:
   - name: play 2 task 2
-  ansible.builtin.debug:
+    ansible.builtin.debug:
     msg: "Hello from play 2 task 2"
 
