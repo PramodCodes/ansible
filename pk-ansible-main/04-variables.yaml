@@ -1,4 +1,4 @@
-# variables
+# variables Play level vars
 - name: variables
   hosts: localhost
   vars:
@@ -8,4 +8,4 @@
   tasks:
     - name: task 1
       ansible.builtin.debug:
-        msg: "Hi, I am learning {{Course}}, and the trainer is {{trainer}}. Duration is {{Duration}}"
+        msg: "Hi, I am learning {{course}}, and the trainer is {{trainer}}. Duration is {{Duration}}"
