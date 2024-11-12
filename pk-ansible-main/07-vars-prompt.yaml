@@ -1,6 +1,6 @@
 #this takes input from command line
 - name: prompt from system in
-  hosts: localhost
+  hosts: localhst
   vars_prompt:
   - name: USERNAME
     prompt: please enter your username
