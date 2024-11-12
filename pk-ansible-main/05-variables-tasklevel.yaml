@@ -1,11 +1,13 @@
 # variables Play level vars
 - name: variables
   hosts: localhost
-  vars:
+  vars: # play level variables
     course: "DevOps"
     trainer: "shiva"
     Duration: "11 hrs"
   tasks:
     - name: task 1
+      vars: #task level has more priority than the play level
+        course: "DevOps with AWS"
       ansible.builtin.debug:
         msg: "Hi, I am learning {{course}}, and the trainer is {{trainer}}. Duration is {{Duration}}.."
