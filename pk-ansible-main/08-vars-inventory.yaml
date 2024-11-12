@@ -1,6 +1,6 @@
 #getting vars from ansible inventory
 - name: getting vars from terraform inventory
-  hosts: localhost
+  hosts: localhst
   tasks:
     - name: get vars from inventory
       ansible.builtin.debug:
