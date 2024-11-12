@@ -2,7 +2,7 @@
 # variables Play level vars
 - name: variables
   hosts: localhost
-  vars_files:
+  vars_files: # this contains var file or list of var files
   - variables.yaml
   tasks:
     - name: task 1
