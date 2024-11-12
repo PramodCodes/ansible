@@ -20,10 +20,10 @@
     ansible.builtin.debug:
       msg: "Hello {{PERSON}}, Good {{WISHES}}"
 
-#1. CMD
-#2. task
-#3. File
-#4. prompt
-#5. play
-#6. inventory
+#1. CMD level arguments
+#2. task level (from yaml script)
+#3. Files such as variable.yaml
+#4. prompt asking for user input from console
+#5. play level vars (global variables in playbook)
+#6. inventory (inventory file variables)
 #7. roles
