@@ -2,12 +2,12 @@
 - name: prompt from system in
   hosts: localhost
   vars_prompt:
-    - name: USERNAME
-      prompt: please enter your username
-      private: false # use can see what they are entering
-    - name: PASSWORD
-      prompt: please enter your password
-      private: true # use can't see what they are entering
+  - name: USERNAME
+    prompt: please enter your username
+    private: false # use can see what they are entering
+  - name: PASSWORD
+    prompt: please enter your password
+    private: true # use can't see what they are entering
   tasks:
     -name: print and check the values
     ansible.builtin.debug:
