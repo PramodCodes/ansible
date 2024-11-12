@@ -1,0 +1,10 @@
+#vars can be completely outside of program, for example you can use variables.yaml here
+# variables Play level vars
+- name: variables
+  hosts: localhost
+  vars_files:
+  - variables.yaml
+  tasks:
+    - name: task 1
+      ansible.builtin.debug:
+        msg: "Hi, I am learning {{course}}, and the trainer is {{trainer}}. Duration is {{Duration}}.."
