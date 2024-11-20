@@ -1,0 +1,27 @@
+# data types in yaml
+- name: checking data types
+  hosts: localhost
+  vars: 
+    NAME: Mr_monk #key value
+    skills: list of skills
+      - devops
+      - shell
+      - terraform
+    Experience: #Map type
+      Devops: 7 years
+      AWS: 1 year
+      Docker: 4 years
+      Trainer-Name: IT-monk
+    Trainer: true # boolean
+    tasks:
+    - name: print variable
+      ansible.builtin.debug:
+        msg: "Name: {{ NAME }}"
+    - name: print list
+      ansible.builtin.debug:
+        msg: "Skills: {{ skills }}"
+    - name: print map
+      ansible.builtin.debug:
+        msg: "Experience: {{ Experience }}"
+
+

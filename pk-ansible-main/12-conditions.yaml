@@ -1,0 +1,11 @@
+# wap to check user roboshop is exists, if exists skip , if not exists create it
+- name: conditions
+  host: localhost
+  tasks:
+  - name: check and create roboshop user    # using command module to write shell logics
+    ansible.builtin.command: id roboshop
+    register: var #this is a variable name
+    ignore_errors: true # ansible will not exit when error is encountered
+  - name: print variable value
+    ansible.builtin.debug:
+      msg: "variable output is {{var}}"
