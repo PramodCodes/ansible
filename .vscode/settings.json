@@ -3,5 +3,6 @@
         "*plays.yml": "ansible",
         "*init.yml": "yaml",
     },
-    "files.trimTrailingWhitespaceInRegexAndStrings": false
+    "files.trimTrailingWhitespaceInRegexAndStrings": false,
+    "files.trimTrailingWhitespace": false
 }
