@@ -10,9 +10,9 @@
   - name: print variable value # lets check variable value if its non zero
     ansible.builtin.debug:
       msg: "variable output is {{var}}"
-#  - name: print exit status or return code # lets check return code
-#    ansible.builtin.debug:
-#      msg: "status is: {{var.rc}}"
+  - name: print exit status or return code # lets check return code
+    ansible.builtin.debug:
+      msg: "status is: {{var.rc}}"
 
 
 # using when keyword to create auser  user
