@@ -1,0 +1,13 @@
+# installing a list of packages using ansible in loop
+- name: loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: print persons
+    ansible.builtin.package:
+      name: "{{item}}" # item is an iterator
+      state: present # state: present tell asnible to install the package which is in name
+    loop:
+    - git
+    - mysql
+    - postfix

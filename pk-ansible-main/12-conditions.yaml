@@ -1,12 +1,15 @@
 # wap to check user roboshop is exists, if exists skip , if not exists create it
 - name: conditions
   hosts: localhost
-#  become: yes
+  become: yes
   tasks:
-  - name: check and create roboshop user    # using command module to write shell logics
-    ansible.builtin.command: id rs
+  # creates a user with name roboshop using shell command
+  - name: check and create roboshop user
+    ansible.builtin.command: id roboshop
     register: var #this is a variable name
-#    ignore_errors: true # ansible will not exit when error is encountered
+    ignore_errors: true # ansible will not exit when error is encountered
+  # saved the above command status to variable so that we can get return code and process it further
+  # we really dont need to print variable value its just for reference and to use in when condition
   - name: print variable value # lets check variable value if its non zero
     ansible.builtin.debug:
       msg: "variable output is {{var}}"
@@ -14,9 +17,7 @@
     ansible.builtin.debug:
       msg: "status is: {{var.rc}}"
 
-
-# using when keyword to create auser  user
-#  - name: create a user
-#    ansible.builtin.user:
-#      name: roboshop
-#    when: var.rc != 0 #condition
+ #condition checks for return code is not zero using when keyword and executes the block  - name: create a user
+    ansible.builtin.user:
+      name: roboshop
+    when: var.rc != 0 #variable var's return code is nonzero
