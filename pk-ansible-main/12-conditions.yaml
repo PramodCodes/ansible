@@ -6,7 +6,7 @@
   - name: check and create roboshop user    # using command module to write shell logics
     ansible.builtin.command: id rs
     register: var #this is a variable name
-    ignore_errors: true # ansible will not exit when error is encountered
+#    ignore_errors: true # ansible will not exit when error is encountered
   - name: print variable value # lets check variable value if its non zero
     ansible.builtin.debug:
       msg: "variable output is {{var}}"
