@@ -4,5 +4,6 @@
         "*init.yml": "yaml",
     },
     "files.trimTrailingWhitespaceInRegexAndStrings": false,
-    "files.trimTrailingWhitespace": false
+    "files.trimTrailingWhitespace": false,
+    "editor.trimAutoWhitespace": false
 }
