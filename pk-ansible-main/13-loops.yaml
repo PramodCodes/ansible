@@ -5,8 +5,8 @@
     - name: print the persons from the list
       ansible.builtin.debug:
         msg: "hello {{item}}" # item is default keyword works similar to i in for loop in java
-        loop:
-          - pk
-          - rk
-          - kk
-          - lk
+      loop:
+        - pk
+        - rk
+        - kk
+        - lk
