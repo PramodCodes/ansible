@@ -1,6 +1,6 @@
 # wap to check user roboshop is exists, if exists skip , if not exists create it
 - name: conditions
-  host: localhost
+  hosts: localhost
   tasks:
   - name: check and create roboshop user    # using command module to write shell logics
     ansible.builtin.command: id roboshop
