@@ -1,0 +1,18 @@
+# starts with -
+- name: ping playbook
+  hosts: web
+  tasks:
+  - name: ping the server
+    ansible.builtin.ping:
+  
+  - name: print message
+    ansible.builtin.debug:
+      msg: "hello devops"
+    tags:
+    - devops
+    
+  - name: print message
+  ansible.builtin.debug:
+    msg: "hello aws"
+  tags:
+  - aws
