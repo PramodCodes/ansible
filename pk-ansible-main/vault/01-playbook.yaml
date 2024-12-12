@@ -1,0 +1,9 @@
+# starts with -
+- name: ping playbook
+  hosts: web
+  tasks:
+  - name: ping the server
+    ansible.builtin.ping:
+# you need to provide which server you are connecting with using hosts file
+# inventory file consolidation of servers is done here (list of servers which ansible can connect with)
+
